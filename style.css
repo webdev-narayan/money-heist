@@ -1,0 +1,550 @@
+*{
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+body::-webkit-scrollbar{
+    display: none;
+
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --bg-primary: #fff;
+    --shadow : rgba(0,0,0,0.1);
+    --color-red : rgb(231, 3, 3);
+    --color-lred:rgb(248, 168, 168);
+
+}
+header{
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 10px var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+nav{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: lighter;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    z-index: 10;
+    padding: 5px;
+    box-shadow: 0 0 10px var(--shadow);
+    overflow: hidden;
+}
+.logo::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: white;
+    z-index: -1;
+    border-radius: 2px;
+    background: var(--color-red);
+    animation: logoanim 1.5s ease  infinite;
+}
+@keyframes logoanim{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+        left: 100%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+.logo span{
+    color: #fff;
+    background: var(--color-red);
+    padding:  0 5px;
+    font-weight: bold;
+    font-family: monospace;
+}
+nav ul li{
+    font-size: 1.6rem;
+    color: white;
+    margin: 0 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav ul li a{
+    color: red;
+    position: relative;
+    padding: .5rem;
+    z-index: 10;
+    transition: .3s ease;
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background:var(--color-red);
+    z-index: -1;  
+    transition: all .3s ease;
+    border-radius: .5rem;
+}
+nav ul li a:hover:before{
+    width: 100%;
+}
+nav ul li a:hover{
+    color: white;
+}
+.btn{
+    animation: navbtn 1s ease infinite;
+}
+@keyframes navbtn{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    
+    100%{
+        transform: scale(1);
+    }
+}
+.btn a{
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: cursive;
+    color: var(--color-red);
+    border:1px solid var(--color-red);
+    padding: 2px;
+    border-radius: 4px;
+
+}
+.btn span{
+    background: var(--color-red);
+    color: whitesmoke;
+    padding: 0 5px;
+    border-radius: 4px;
+}
+
+#nav_btn{
+    font-size: 2.5rem;
+    background: var(--color-red);
+    padding: 1rem;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+#nav_btn:hover{
+    background:var(--color-lred) ;
+    color :var(--color-red);
+
+}
+/* .links{
+    background: violet;
+} */
+
+/* hero section =============== */
+
+.hero_section{
+    width: 100%;
+    /* height: auto; */
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding-top: 6rem;
+    /* background: lightslategrey; */
+
+}
+.hero_box{
+    flex: 1 1 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero_box img{
+    width: 80%;
+    height: auto;
+}
+.hero_box h1{
+    display: block;
+    margin: auto;
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+.hero_box span{
+    color: var(--color-red);
+    text-transform: capitalize;
+    font-size: 8rem;
+    text-shadow: 2px 2px 10px black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.custom-shape-divider-top-1633017314 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1633017314 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 30px;
+}
+
+.custom-shape-divider-top-1633017314 .shape-fill {
+    fill: #FFFFFF;
+}
+.seco{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.459),rgba(37, 35, 35, 0.844)), url(img/bggroup.jpg) ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.seco-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    
+}
+.seco h1{
+    text-transform: uppercase;
+    font-size: 7rem;
+    padding: 0;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow: 2px 2px 5px grey;
+}
+.seco h1 span{
+    background: var(--color-red);
+    padding: 0 5px;
+}
+.seco .seco-content p{
+    margin-top: 3rem;
+    color: white;
+    font-size: 2rem;
+    font-family: monospace;
+}
+.custom-shape-divider-bottom-1633079506 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1633079506 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 89px;
+}
+
+.custom-shape-divider-bottom-1633079506 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.about{
+    padding: 2rem 3rem;
+}
+.about h1{
+    font-size: 4rem;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--color-red);
+}
+.about .row{
+    display: flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.about .row .image{
+    flex:1 1 45rem;
+    padding: 2rem;
+}
+.about .row .image img{
+    width: 100%;
+    height: 100%;
+}
+.about .row .content{
+    flex: 1 1 45rem;
+}
+.content .title{
+    font-size: 4rem;
+    text-transform: capitalize;
+    margin: 2rem 0 ;
+}
+.content p{
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+}
+.icons-container{
+    display: flex;
+    gap: 1rem;
+}
+.icons{
+    padding: 1rem;
+    background: var(--color-lred);
+    flex: 1 1 15rem;
+    border-radius: .5rem;
+    padding:1.5rem;
+    text-align: center;
+}
+.about .row .content .icons-container .icons i{
+    border-radius: 50%;
+    background: var(--color-red);
+    color:var(--main-color);
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+}
+.icons h3{
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.over{
+    margin-top: 5rem;
+    font-size: 6rem;
+    padding: 5rem 1rem;
+    text-align: center;
+    font-family: 'Caveat';
+    font-weight: 600;
+    color: var(--color-red);
+}
+.characters{
+    padding: 3rem 3rem;
+}
+.characters .heading{
+    color: var(--color-red);
+    font-size: 5rem;
+    text-align: center;
+}
+.box-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap:1.5rem;
+}
+.characters .box-container .box{
+    height: 30rem;
+    border-radius: .5rem;
+    overflow:hidden;
+    position: relative;
+    box-shadow:0 1px 1rem rgba(0, 0, 0, 0.54) ;
+}
+
+.characters .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.characters .box-container .box span{
+    position: absolute;
+    top:1rem; right: 2rem;
+    font-weight: bolder;
+    font-size: 5rem;
+    color:var(--color-red);
+}
+
+.characters .box-container .box .content{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top:6rem; left: 0;
+    transition-delay: .3s;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.characters .box-container .box:hover .content{
+    top:0; 
+    opacity: 1;
+}
+
+.characters .box-container .box .content h3{
+    font-size: 2.5rem;
+    padding-bottom: .5rem;
+    color:var(--color-red);
+}
+
+.characters .box-container .box .content p{
+    font-size: 1.5rem;
+    color:black;
+}
+
+.characters .box-container .box::before{
+    height: 100%;
+    width: 100%;
+    content: '';
+    position: absolute;
+    top:0; left: 0;
+    background: #fff;
+    clip-path: circle(30% at 93% 0);
+    transition: .3s linear;
+}
+
+.characters .box-container .box:hover::before{
+    clip-path: circle(100%);
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: grey;
+    padding: 2rem 1rem;
+}
+footer a{
+    text-decoration: none;
+    display: block;
+    padding: .2rem 1rem ;
+    font-size: 1.5rem;
+    color: white;
+    transition: all .3s ease;
+    margin: .5rem;
+}
+footer a:hover{
+    transform: translateX(1rem);
+}
+footer h2{
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem;
+}
+.social a{
+    width: 4rem;
+    height: 4rem;
+    background: white;
+    display: inline-block;
+
+}
+.social a:hover{
+    transform: scale(1.2) translate(-50%,-50%);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1000px){
+    html{
+        font-size: 55%;
+    }
+    nav ul li{
+        margin: 0 1rem;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width:768px){
+    html{
+        font-size: 50%;
+    }
+    #nav_btn{
+        display: initial;
+    }
+    header .links{
+        position: absolute;
+        top: 110%;
+        right: 1rem;
+        background: #fff;
+        width: 30rem;
+        border-radius: .5rem;
+        border: 1px solid var(--color-red);
+        box-shadow: 2px  2px 1rem rgba(97, 96, 96, 0.733);
+        transform: scale(0);
+        transform-origin: top right;
+        opacity: 0;
+        transition: all .5s ease;
+    }
+    header .active{
+        transform: scale(1);
+        opacity: 1;
+    }
+    header .links ul li{
+        display: block;
+        font-size: 2rem ;
+        padding: 1.5rem;
+        margin: .5rem 1rem;
+        border-radius: .5rem;
+    }
+    .links ul li:hover{
+
+        background: var(--color-lred);
+    }
+    .hero_box h1 , .hero-Box h1 span{
+        font-size: 3rem;
+    }
+    .seco-content h1{
+        font-size: 6rem;
+    }
+    
+
+}
+
+
+@media(max-width:500px){
+    html{
+        font-size: 45%;
+    }
+    .hero_box h1{
+        font-size: 2rem;
+    }
+    .seco-content h1{
+        font-size: 5rem;
+    }
+}
